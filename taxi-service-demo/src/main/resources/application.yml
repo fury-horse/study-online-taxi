@@ -1,0 +1,8 @@
+#spring:
+#  application:
+#    name: taxi-service-demo
+eureka:
+  client:
+    #设置服务注册中心的URL
+    service-url:
+      defaultZone: http://localhost:2020/admin/eureka/
