@@ -1,17 +1,15 @@
-package com.zacx.taxi;
+package com.zacx.taxi.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@EnableHystrix
 @EnableFeignClients
 @SpringBootApplication
-public class TaxiServiceDemoApplication {
+public class TaxiServiceUserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaxiServiceDemoApplication.class, args);
+		SpringApplication.run(TaxiServiceUserApplication.class, args);
 	}
 
 }

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka
+    name: eureka1
 eureka:
   client:
     #是否将自己注册到Eureka Server,默认为true，由于当前就是server，故而设置成false，表明该服务不会向eureka注册自己的信息
@@ -9,7 +9,8 @@ eureka:
     fetch-registry: false
     #设置服务注册中心的URL，用于client和server端交流
     service-url:
-      defaultZone: http://localhost:2020/admin/eureka/,http://localhost:2021/admin/eureka/
+      defaultZone: http://localhost:2020/admin/eureka/
+      #defaultZone: http://localhost:2020/admin/eureka/,http://localhost:2021/admin/eureka/
 server:
   port: 2020
   servlet:

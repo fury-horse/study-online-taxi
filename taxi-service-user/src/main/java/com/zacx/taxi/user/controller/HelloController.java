@@ -1,0 +1,26 @@
+package com.zacx.taxi.user.controller;
+
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+/**
+* @desc    
+* @version 1.0
+* @author  Liang Jun
+* @date    2020年02月22日 00:40:26
+**/
+@Controller
+public class HelloController {
+    @Value("${server.port}")
+    private String port;
+
+    @RequestMapping("/hi")
+    @ResponseBody
+    public String home(@RequestParam(value = "name", defaultValue = "(●'◡'●)") String name) {
+        return "hi" + name + ", I am from port:" + port;
+    }
+}

@@ -8,10 +8,11 @@
 		<version>2.2.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.zacx.taxi</groupId>
-	<artifactId>taxi-eureka</artifactId>
+	<artifactId>taxi-service-user</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>taxi-eureka</name>
+	<name>taxi-service-user</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -21,8 +22,13 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
 		<dependency>
@@ -35,6 +41,12 @@
 					<artifactId>junit-vintage-engine</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+
+		<!-- 引入feign依赖 ，用来实现接口伪装 -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 	</dependencies>
 
