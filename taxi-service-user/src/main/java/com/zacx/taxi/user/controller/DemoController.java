@@ -20,8 +20,8 @@ public class DemoController {
     @Autowired
     private SchedualSercie schedualSercie;
 
-    @GetMapping(value = "/hi")
-    public String hi(@RequestParam String name) {
+    @GetMapping(value = "/home")
+    public String home(@RequestParam String name) {
         return schedualSercie.sayFromClientOne(name);
     }
 }

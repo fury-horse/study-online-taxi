@@ -17,8 +17,8 @@ public class HelloController {
     @Value("${server.port}")
     private String port;
 
-    @RequestMapping("/he")
-    public String home(@RequestParam(value = "name", defaultValue = "forezp") String name) {
+    @RequestMapping("/hi")
+    public String home(@RequestParam(value = "name", defaultValue = "(●'◡'●)") String name) {
         return "hi" + name + ", I am from port:" + port;
     }
 }

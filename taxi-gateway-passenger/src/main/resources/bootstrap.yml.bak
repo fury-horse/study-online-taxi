@@ -1,0 +1,22 @@
+#应用名称，配置文件名，此时:congif-client-dev.yml
+spring:
+  application:
+    name: taxi-gateway-passenger
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        # config server 的服务id
+        service-id: taxi-config
+      # 环境
+      profile: pro
+      # 分支
+      label: master
+#      uri: http://localhost:10010
+
+eureka:
+  client:
+    service-url: #设置服务注册中心的URL
+      defaultZone: http://localhost:2020/admin/eureka/
+server:
+  port: 9001

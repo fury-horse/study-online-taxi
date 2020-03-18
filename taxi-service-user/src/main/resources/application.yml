@@ -1,10 +1,31 @@
 spring:
   application:
     name: taxi-service-user
+  zipkin:
+    base-url: http://49.235.216.115:9411/
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:2020/admin/eureka/
 server:
-  port: 8001
+  port: 8002
 
+#Admin监控
+management:
+  endpoints:
+      web:
+        exposure:
+          #yml加双引号，properties不用加
+          include: "*"
+      health:
+        ##默认是never
+        show-details: ALWAYS
+        enabled: true
+  endpoint:
+    health:
+      ##默认是never
+      show-details: ALWAYS
+      enabled: true
+    routes:
+      enabled: true

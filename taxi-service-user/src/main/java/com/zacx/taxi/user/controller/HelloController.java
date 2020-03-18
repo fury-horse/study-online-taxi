@@ -2,10 +2,11 @@ package com.zacx.taxi.user.controller;
 
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
 * @desc    
@@ -13,14 +14,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 * @author  Liang Jun
 * @date    2020年02月22日 00:40:26
 **/
-@Controller
+@RestController
 public class HelloController {
     @Value("${server.port}")
     private String port;
 
-    @RequestMapping("/hi")
-    @ResponseBody
+    @GetMapping("/hi")
     public String home(@RequestParam(value = "name", defaultValue = "(●'◡'●)") String name) {
-        return "hi" + name + ", I am from port:" + port;
+        return name + ", I am from port:" + port;
+    }
+
+    @GetMapping("token")
+    public String token(HttpServletRequest request) {
+        return "token=" + request.getHeader("token");
     }
 }

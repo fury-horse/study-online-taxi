@@ -3,7 +3,6 @@ package com.zacx.taxi.user.api;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
@@ -15,6 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 //@FeignClient(value = "TAXI-SERVICE-USER", fallback = HystrixAPIFallback.class)
 @FeignClient(value = "TAXI-SERVICE-USER", fallbackFactory = HystrixAPIFallbackFactory.class)
 public interface HystrixAPI {
-    @RequestMapping(value = "/hi", method = RequestMethod.POST)
+    @RequestMapping(value = "/hi")
     String greet(@RequestParam(value = "name") String name);
 }

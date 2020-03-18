@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: taxi-gateway-turbine
+eureka:
+  client:
+    service-url: #设置服务注册中心的URL
+      defaultZone: http://localhost:2020/admin/eureka/
+server:
+  port: 10001
+
+
+turbine:
+  app-config: taxi-gateway-passenger,taxi-gateway-passenger2
+  cluster-name-expression: "'default'"

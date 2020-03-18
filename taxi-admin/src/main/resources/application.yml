@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: taxi-admin
+  mail:
+    host: smtp.qq.com
+    username: 1600172212
+    password: **********
+    properties:
+          mail:
+            smpt:
+              auth: true
+              starttls:
+                enable: true
+                required: true
+  boot:
+    admin:
+      notify:
+        mail:
+          to: 420333870@qq.com
+          from: 1600172212@qq.com
+server:
+  port: 3030
+
+eureka:
+  client:
+    service-url: #设置服务注册中心的URL
+      defaultZone: http://localhost:2020/admin/eureka/

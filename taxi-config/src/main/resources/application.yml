@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: taxi-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fury-horse/study-online-taxi-config
+          username:
+          password:
+           #默认是秒，因为git慢
+          timeout: 15
+
+server:
+  port: 10010
+eureka:
+  client:
+    service-url: #设置服务注册中心的URL
+      defaultZone: http://localhost:2020/admin/eureka/

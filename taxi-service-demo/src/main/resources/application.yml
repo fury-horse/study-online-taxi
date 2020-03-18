@@ -3,11 +3,22 @@ spring:
     name: taxi-service-demo
 eureka:
   client:
-    #设置服务注册中心的URL
-    service-url:
+    service-url: #设置服务注册中心的URL
       defaultZone: http://localhost:2020/admin/eureka/
 server:
-  port: 9001
+  port: 8002
 feign:
   hystrix:
     enabled: true
+
+#Admin监控
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#  endpoint:
+#    health:
+#      ##默认是never
+#      show-details: ALWAYS
+#      enabled: true

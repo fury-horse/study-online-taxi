@@ -21,9 +21,9 @@ public class HystrixController {
     @Autowired
     private HystrixAPI hystrixAPI; //Feign调用
 
-    @RequestMapping("/hi")
+    @RequestMapping("/home")
     public String home(@RequestParam(value = "name", defaultValue = "(●'◡'●)") String name) {
-        //return hystrixService.greet(name);
+//        return hystrixService.greet(name);
         return hystrixAPI.greet(name);
     }
 }
