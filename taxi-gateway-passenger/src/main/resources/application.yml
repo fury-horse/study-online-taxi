@@ -2,40 +2,40 @@ spring:
   application:
     name: taxi-gateway-passenger
   zipkin:
-    base-url: http://49.235.216.115:9411/
+    base-url: http://49.235.216.115:7001/
 
 eureka:
   client:
     service-url: #设置服务注册中心的URL
-      defaultZone: http://localhost:2020/admin/eureka/
+      defaultZone: http://localhost:2021/admin/eureka/
 server:
   port: 9001
 
 #Admin监控
-management:
-  endpoints:
-      web:
-        exposure:
-          #yml加双引号，properties不用加
-          include: "*"
-      health:
-        ##默认是never
-        show-details: ALWAYS
-        enabled: true
-  endpoint:
-    health:
-      ##默认是never
-      show-details: ALWAYS
-      enabled: true
-    routes:
-      enabled: true
+#management:
+#  endpoints:
+#      web:
+#        exposure:
+#          #yml加双引号，properties不用加
+#          include: "*"
+#      health:
+#        ##默认是never
+#        show-details: ALWAYS
+#        enabled: true
+#  endpoint:
+#    health:
+#      ##默认是never
+#      show-details: ALWAYS
+#      enabled: true
+#    routes:
+#      enabled: true
 
 #ribbon负载均衡
-taxi-service-user:
-  ribbon:
-    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
-zuul:
-  sensitive-headers: token
+#taxi-service-user:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#zuul:
+#  sensitive-headers: token
 
 
 #路由前缀
@@ -91,5 +91,3 @@ zuul:
 #    custom-zuul-name:
 #      path: /zuul-custom-name/**
 #      service-id: taxi-service-user
-
-  #zipkin

@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 * @date    2020年03月01日 22:25:14
 **/
 @Service
-public class DemoService {
+public class DemoService1 {
     @Autowired
     private RestTemplate restTemplate;
 

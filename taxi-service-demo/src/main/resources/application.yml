@@ -4,7 +4,7 @@ spring:
 eureka:
   client:
     service-url: #设置服务注册中心的URL
-      defaultZone: http://localhost:2020/admin/eureka/
+      defaultZone: http://host01:2021/admin/eureka/
 server:
   port: 8002
 feign:

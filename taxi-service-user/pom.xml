@@ -52,15 +52,22 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
+
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.cloud</groupId>-->
 			<!--<artifactId>spring-cloud-starter-sleuth</artifactId>-->
 		<!--</dependency>-->
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-zipkin</artifactId>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.liangjun.study</groupId>
+            <artifactId>taxi-service-user-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>

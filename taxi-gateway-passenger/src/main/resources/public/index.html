@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        //需要判断浏览器支不支持，可以去w3c进行查看
+        var source = new EventSource('get_data');
+        source.onmessage = function (evt) {
+            console.info(evt.data);
+            document.getElementById("rdiv").innerText = evt.data;
+        }
+    </script>
+</head>
+<body>
+司机听单中：<span id = "rdiv"></span>
+</body>
+</html>
