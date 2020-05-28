@@ -1,8 +1,8 @@
 spring:
   application:
     name: taxi-gateway-passenger
-  zipkin:
-    base-url: http://49.235.216.115:7001/
+#  zipkin:
+#    base-url: http://49.235.216.115:7001/
 
 eureka:
   client:
@@ -46,7 +46,7 @@ server:
 #指定服务的访问路径
 #zuul:
 #  routes:
-#    taxi-service-user: /zuul-taxi-service-user/**
+#    taxi-service-user: /xxoo-taxi-service-user/**
 
 #路由忽略服务
 #zuul:
@@ -66,7 +66,7 @@ server:
 #zuul:
 #  routes:
 #    custom-zuul-name: #此处名字随便取
-#      path: /zuul-custom-name/**
+#      path: /taxi-service-user/**
 #      url: http://localhost:8002/
 
 #自定义命名访问路径2
@@ -91,3 +91,5 @@ server:
 #    custom-zuul-name:
 #      path: /zuul-custom-name/**
 #      service-id: taxi-service-user
+
+env: AAAA

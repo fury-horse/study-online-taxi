@@ -9,14 +9,19 @@ spring:
         # config server 的服务id
         service-id: taxi-config
       # 环境
-      profile: pro
+      profile: dev
       # 分支
-      label: master
+      label: test
 #      uri: http://localhost:10010
 
 eureka:
   client:
     service-url: #设置服务注册中心的URL
-      defaultZone: http://localhost:2020/admin/eureka/
+      defaultZone: http://localhost:2021/admin/eureka/
 server:
   port: 9001
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -9,7 +9,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:2021/admin/eureka/
 server:
-  port: 8001
+  port: 8002
 
 #Admin监控
 #management:
